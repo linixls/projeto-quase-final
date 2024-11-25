@@ -1,0 +1,254 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #e79f19, #e79f19); /* Gradiente de fundo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #07090a;  
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 30px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #f5a623;
+    transform: scale(1.1); /* Animação de aumento */
+}
+
+/* Botões de Scroll */
+.scroll-buttons {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-buttons button {
+    background-color: #003f87;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-buttons button:hover {
+    background-color: #f5a623;
+}
+
+/* Seções principais */
+section {
+    padding: 200px 60px 60px; /* Ajustando o padding para compensar a barra fixa */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100px); /* As seções começam abaixo e invisíveis */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sobre {
+    background: url('imagem/energia-solar-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 40px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Sombra no texto */
+}
+
+.produtos {
+    background-color: #f9f9f9;
+    padding: 50px 40px;
+}
+
+.produto-item {
+    display: inline-block;
+    width: 30%;
+    margin: 0 15px;
+    text-align: left;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.produto-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.produto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efeito de sombra mais forte */
+}
+
+.contato {
+    background-color: #ffffff;
+    color: #333;
+    padding: 50px 40px;
+}
+
+.form-contato input, .form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-contato input:focus, .form-contato textarea:focus {
+    border: 2px solid #003f87;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #003f87;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f5a623;
+}
+
+/* Estilo geral do Rodapé */
+.footer {
+    background-color: #07090a; /* Azul escuro para o fundo do rodapé */
+    color: #fff; /* Cor do texto branco */
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+/* Container do Rodapé */
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Colunas dentro do rodapé */
+.footer-column {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f5a623; /* Cor laranja para os títulos */
+}
+
+/* Links dentro do rodapé */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f5a623; /* Cor laranja ao passar o mouse */
+}
+
+/* Estilo das Redes Sociais */
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f5a623;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+    background-color: #040505; /* Azul mais escuro */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Responsividade: Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        padding: 20px 0;
+    }
+}
